@@ -1,0 +1,72 @@
+html, body {
+   width:100%;
+   height:100%;
+   margin:0;
+   font-family:'Rajdhani', sans-serif;
+}
+*,*:before,*:after {box-sizing:border-box;}
+#wrapper {
+   width:100%;
+   height:100%;
+}
+#box_container {
+   width:27%;
+   height:auto;
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%, -50%) scale(1,1) translate3d(0,0,0);
+   overflow:hidden;
+   font-size:2.2rem;
+   background:white;
+}
+.box {
+   float:left;
+   width:33.33333%;
+   height:100%;
+   background:white;
+}
+.box:nth-child(2) > .box-title > span {color:rgb(244, 67, 54);}
+.box:hover > .box-title > span {color:rgb(244, 67, 54);}
+.box-title {
+   width:100%;
+   height:100%;
+   float:left;
+   overflow:hidden;
+   z-index:1;
+   text-align:center;
+   line-height:60px;
+}
+.box > .box-description {
+   height:100%;
+   float:left;
+   position:absolute;
+   z-index:-1;
+   text-align:center;
+   line-height:60px;
+   background:white;
+   text-align:left;
+}
+.box:first-child > .box-description {left:33.33333%;width:33%;}
+.box:nth-child(2) > .box-description {left:100%;width:200%;}
+.box:nth-child(3) > .box-description {left:100%;width:200%;}
+.box > .box-description > span {
+   width:100%;
+   height:100%;
+   display:block;
+   position:relative;
+}
+@media screen and (max-width:1920px) {#box_container {font-size:2.6vw}}
+@media screen and (max-width:1200px) {
+   #box_container {
+      width:40%;
+      font-size:4.1vw;
+   }
+}
+@media screen and (max-width:767px) {#box_container {font-size:4vw;}}
+@media screen and (max-width:480px) {
+   #box_container {
+      width:60%;
+      font-size:5.8vw;
+   }
+}
